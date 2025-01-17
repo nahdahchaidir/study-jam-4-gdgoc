@@ -2,6 +2,11 @@ from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
+data = [
+    {"id": 1, "name": "Nahdah", "status": "Active"},
+    {"id": 2, "name": "Fauziah", "status": "Inactive"}
+]
+
 @app.route('/')
 def home():
     return render_template('home.html', title="Home Page")
